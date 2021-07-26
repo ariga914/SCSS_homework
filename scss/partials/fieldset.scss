@@ -1,3 +1,9 @@
+@mixin default-input {
+    margin-bottom: 10px;
+    border: 1px solid $form-cream;
+    border-radius: 3px;
+}
+
 legend {
     padding: 10px;
     font-family: Roboto, Arial, sans-serif;
@@ -46,41 +52,32 @@ legend {
     &:hover i {
         color: $form-green;
     }
-}
-
-@mixin default-input {
-    margin-bottom: 10px;
-    border: 1px solid $form-cream;
-    border-radius: 3px;
-}
-
-input {
-    @include default-input();
-    width: calc(100% - 10px);
-    padding: 5px;
-    &[type="date"] {
-        padding: 4px 5px;
-        &::-webkit-inner-spin-button {
-            display: none;
-        }
-        &::-webkit-calender-picker-indicator {
-            right: 1%;
-            z-index: 2;
-            opacity: 0;
-            cursor: pointer;
-            position: absolute;
-            font-size: 20px;
-            color: $form-yellow_green;
+    input {
+        @include default-input();
+        width: calc(100% - 10px);
+        padding: 5px;
+        &[type="date"] {
+            padding: 4px 5px;
+            &::-webkit-inner-spin-button {
+                display: none;
+            }
+            &::-webkit-calender-picker-indicator {
+                right: 1%;
+                z-index: 2;
+                opacity: 0;
+                cursor: pointer;
+                position: absolute;
+                font-size: 20px;
+                color: $form-yellow_green;
+            }
         }
     }
-}
-
-select {
-    @include default-input();
-}
-
-textarea {
-    @include default-input();
-    width: calc(100% - 12px);
-    padding: 5px;
+    select {
+        @include default-input();
+    }
+    textarea {
+        @include default-input();
+        width: calc(100% - 12px);
+        padding: 5px;
+    }
 }

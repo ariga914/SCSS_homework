@@ -1,23 +1,20 @@
 html,
 body {
     min-height: 100%;
-}
-
-html,
-body,
-div,
-form,
-input,
-select,
-textarea,
-label {
-    padding: 0;
-    margin: 0;
-    outline: none;
-    font-family: Roboto, Arial, sans-serif;
-    font-size: 14px;
-    color: $form-brown;
-    line-height: 22px;
+    div,
+    form,
+    input,
+    select,
+    textarea,
+    label {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: $form-brown;
+        line-height: 22px;
+    }
 }
 
 .testbox {
@@ -26,14 +23,13 @@ label {
     align-items: center;
     height: inherit;
     padding: 20px;
-}
-
-form {
-    width: 100%;
-    padding: inherit;
-    border-radius: 6px;
-    background: $form-white;
-    box-shadow: 0 0 8px $form-green;
+    form {
+        width: 100%;
+        padding: inherit;
+        border-radius: 6px;
+        background: $form-white;
+        box-shadow: 0 0 8px $form-green;
+    }
 }
 
 @media (min-width: 568px) {
