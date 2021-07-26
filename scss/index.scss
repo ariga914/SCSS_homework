@@ -1,6 +1,9 @@
-$bgcolor: lightblue;
-$textcolor: darkblue;
-body {
-    background-color: $bgcolor;
-    color: $textcolor;
-}
+@charset "utf-8";
+//import common definitions
+@import "partials/common/colors";
+@import "partials/common/general";
+@import "partials/common/button";
+//import page partials
+@import "partials/banner.scss";
+@import "partials/fieldset.scss";
+@import "partials/btn-block.scss";
