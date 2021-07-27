@@ -20,64 +20,64 @@ legend {
     div {
         width: 48%;
     }
-}
-
-.item {
-    position: relative;
-    margin: 10px 0;
-    span {
-        color: $form-red;
-    }
-    input:hover,
-    select:hover,
-    textarea:hover {
-        border: 1px solid transparent;
-        box-shadow: 0 0 3px 0 $form-green;
-        color: $form-green;
-        &::placeholder {
+    .item {
+        position: relative;
+        margin: 10px 0;
+        span {
+            color: $form-red;
+        }
+        input:hover,
+        select:hover,
+        textarea:hover {
+            border: 1px solid transparent;
+            box-shadow: 0 0 3px 0 $form-green;
             color: $form-green;
-        }
-    }
-    i {
-        right: 1%;
-        top: 30px;
-        z-index: 1;
-        &::-webkit-calender-picker-indicator {
-            position: absolute;
-            font-size: 20px;
-            color: $form-yellow_green;
-        }
-    }
-    &:hover p,
-    &:hover i {
-        color: $form-green;
-    }
-    input {
-        @include default-input();
-        width: calc(100% - 10px);
-        padding: 5px;
-        &[type="date"] {
-            padding: 4px 5px;
-            &::-webkit-inner-spin-button {
-                display: none;
+            &::placeholder {
+                color: $form-green;
             }
+        }
+        i {
+            right: 1%;
+            top: 30px;
+            z-index: 1;
             &::-webkit-calender-picker-indicator {
-                right: 1%;
-                z-index: 2;
-                opacity: 0;
-                cursor: pointer;
                 position: absolute;
                 font-size: 20px;
                 color: $form-yellow_green;
             }
         }
+        &:hover p,
+        &:hover i {
+            color: $form-green;
+        }
+        input {
+            @include default-input();
+            width: calc(100% - 10px);
+            padding: 5px;
+            &[type="date"] {
+                padding: 4px 5px;
+                &::-webkit-inner-spin-button {
+                    display: none;
+                }
+                &::-webkit-calender-picker-indicator {
+                    right: 1%;
+                    z-index: 2;
+                    opacity: 0;
+                    cursor: pointer;
+                    position: absolute;
+                    font-size: 20px;
+                    color: $form-yellow_green;
+                }
+            }
+        }
+        select {
+            @include default-input();
+        }
     }
-    select {
-        @include default-input();
-    }
-    textarea {
-        @include default-input();
-        width: calc(100% - 12px);
-        padding: 5px;
-    }
+}
+
+textarea {
+    @include default-input();
+    width: calc(100% - 12px);
+    padding: 5px;
 }
