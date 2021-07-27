@@ -1,201 +1,167 @@
 html,
 body {
-    min-height: 100%;
-}
-
-body,
-div,
-form,
-input,
-select,
-textarea,
-label {
+  min-height: 100%; }
+  html div,
+  html form,
+  html input,
+  html select,
+  html textarea,
+  html label,
+  body div,
+  body form,
+  body input,
+  body select,
+  body textarea,
+  body label {
     padding: 0;
     margin: 0;
     outline: none;
     font-family: Roboto, Arial, sans-serif;
     font-size: 14px;
     color: #666;
-    line-height: 22px;
-}
+    line-height: 22px; }
 
-h1 {
+.testbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  padding: 20px; }
+  .testbox form {
+    width: 100%;
+    padding: inherit;
+    border-radius: 6px;
+    background: #ffffff;
+    box-shadow: 0 0 8px #006622; }
+
+@media (min-width: 568px) {
+  .name-item,
+  .city-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .name-item input,
+    .name-item div,
+    .city-item input,
+    .city-item div {
+      width: calc(50% - 20px); }
+      .name-item input input,
+      .name-item div input,
+      .city-item input input,
+      .city-item div input {
+        width: 97%; }
+      .name-item input label,
+      .name-item div label,
+      .city-item input label,
+      .city-item div label {
+        display: block;
+        padding-bottom: 5px; } }
+
+button {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #006622;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer; }
+  button:hover {
+    background: #00b33c; }
+
+.banner {
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  background-color: #006622;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .banner h1 {
     position: absolute;
     margin: 0;
     font-size: 50px;
-    color: #fff;
+    color: #ffffff;
     z-index: 2;
-    line-height: 83px;
-}
+    line-height: 83px; }
+    .banner h1::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      width: 100%;
+      height: 100%; }
 
 legend {
-    padding: 10px;
-    font-family: Roboto, Arial, sans-serif;
-    font-size: 18px;
-    color: #fff;
-    background-color: #006622;
-}
-
-textarea {
-    width: calc(100% - 12px);
-    padding: 5px;
-}
-
-.testbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: inherit;
-    padding: 20px;
-}
-
-form {
-    width: 100%;
-    padding: 20px;
-    border-radius: 6px;
-    background: #fff;
-    box-shadow: 0 0 8px #006622;
-}
-
-.banner {
-    position: relative;
-    height: 250px;
-    background-size: cover;
-    background-color: #006622;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.banner::after {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-input,
-select,
-textarea {
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-input {
-    width: calc(100% - 10px);
-    padding: 5px;
-}
-
-input[type="date"] {
-    padding: 4px 5px;
-}
-
-textarea {
-    width: calc(100% - 12px);
-    padding: 5px;
-}
-
-.item:hover p,
-.item:hover i,
-input:hover::placeholder {
-    color: #006622;
-}
-
-.item input:hover,
-.item select:hover,
-.item textarea:hover {
-    border: 1px solid transparent;
-    box-shadow: 0 0 3px 0 #006622;
-    color: #006622;
-}
-
-.item {
-    position: relative;
-    margin: 10px 0;
-}
-
-.item span {
-    color: red;
-}
-
-input[type="date"]::-webkit-inner-spin-button {
-    display: none;
-}
-
-.item i,
-input[type="date"]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    font-size: 20px;
-    color: #00b33c;
-}
-
-.item i {
-    right: 1%;
-    top: 30px;
-    z-index: 1;
-}
+  padding: 10px;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #006622; }
 
 .columns {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .columns div {
+    width: 48%; }
+  .columns .item {
+    position: relative;
+    margin: 10px 0; }
+    .columns .item span {
+      color: #b30027; }
+    .columns .item input:hover,
+    .columns .item select:hover,
+    .columns .item textarea:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 3px 0 #006622;
+      color: #006622; }
+      .columns .item input:hover::placeholder,
+      .columns .item select:hover::placeholder,
+      .columns .item textarea:hover::placeholder {
+        color: #006622; }
+    .columns .item i {
+      right: 1%;
+      top: 30px;
+      z-index: 1; }
+      .columns .item i::-webkit-calender-picker-indicator {
+        position: absolute;
+        font-size: 20px;
+        color: #00b33c; }
+    .columns .item:hover p,
+    .columns .item:hover i {
+      color: #006622; }
+    .columns .item input {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: calc(100% - 10px);
+      padding: 5px; }
+      .columns .item input[type="date"] {
+        padding: 4px 5px; }
+        .columns .item input[type="date"]::-webkit-inner-spin-button {
+          display: none; }
+        .columns .item input[type="date"]::-webkit-calender-picker-indicator {
+          right: 1%;
+          z-index: 2;
+          opacity: 0;
+          cursor: pointer;
+          position: absolute;
+          font-size: 20px;
+          color: #00b33c; }
+    .columns .item select {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px; }
 
-.columns div {
-    width: 48%;
-}
-
-[type="date"]::-webkit-calendar-picker-indicator {
-    right: 1%;
-    z-index: 2;
-    opacity: 0;
-    cursor: pointer;
-}
-
-input[type="checkbox"] {
-    display: none;
-}
+textarea {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: calc(100% - 12px);
+  padding: 5px; }
 
 .btn-block {
-    margin-top: 10px;
-    text-align: center;
-}
-
-button {
-    width: 150px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #006622;
-    font-size: 16px;
-    color: #fff;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #00b33c;
-}
-
-@media (min-width: 568px) {
-    .name-item,
-    .city-item {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .name-item input,
-    .name-item div {
-        width: calc(50% - 20px);
-    }
-    .name-item div input {
-        width: 97%;
-    }
-    .name-item div label {
-        display: block;
-        padding-bottom: 5px;
-    }
-}
+  margin-top: 10px;
+  text-align: center; }
